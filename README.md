@@ -30,15 +30,18 @@
 
 <!-- [FOTO DASHBOARD ADMIN: Ganti atribut 'src' pada tag img di bawah dengan path gambar screenshot Dashboard Admin Anda] -->
 ### 1. Dashboard Admin
-![Dashboard Admin](https://via.placeholder.com/800x400?text=Screenshot+Dashboard+Admin)
+<img width="1920" height="1080" alt="Screenshot 2026-06-03 025253" src="https://github.com/user-attachments/assets/8fa8c547-04ba-46b9-8c9c-466c9bec1422" />
+
 
 <!-- [FOTO HALAMAN SCAN NFC: Ganti atribut 'src' di bawah dengan gambar saat proses scan/tapping NFC berlangsung] -->
 ### 2. Halaman Tapping / Scan NFC
-![Scan NFC](https://via.placeholder.com/800x400?text=Screenshot+Tapping+NFC)
+<img width="1920" height="1080" alt="Screenshot 2026-06-03 025352" src="https://github.com/user-attachments/assets/d85f309f-1996-438f-8d92-eb35b84f39f7" />
+
 
 <!-- [FOTO HALAMAN DAFTAR BARANG: Ganti atribut 'src' di bawah dengan gambar tabel daftar barang] -->
 ### 3. Daftar Inventaris Barang
-![Daftar Barang](https://via.placeholder.com/800x400?text=Screenshot+Daftar+Barang)
+<img width="1920" height="1080" alt="Screenshot 2026-06-03 025439" src="https://github.com/user-attachments/assets/59c5cce0-8319-4d36-a596-17407b2d7156" />
+
 
 ## ⚙️ Cara Instalasi (Instalasi Lokal)
 
