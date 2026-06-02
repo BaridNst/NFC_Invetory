@@ -1,6 +1,7 @@
 <p align="center">
   <!-- [FOTO LOGO: Masukkan URL/path foto logo project Anda di sini. Ukuran disarankan: 200x200px] -->
-  <img src="https://via.placeholder.com/200?text=Logo+NFC+Inventory" alt="Logo Project">
+  <img width="1077" height="1068" alt="LOGO WEB MOBILE NFC INVETORY" src="https://github.com/user-attachments/assets/5c38a2d4-a43d-4c23-bf6c-de297ef45af4" />
+
 </p>
 
 <h1 align="center">NFC Inventory Management System</h1>
