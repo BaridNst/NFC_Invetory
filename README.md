@@ -1,58 +1,91 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <!-- [FOTO LOGO: Masukkan URL/path foto logo project Anda di sini. Ukuran disarankan: 200x200px] -->
+  <img src="https://via.placeholder.com/200?text=Logo+NFC+Inventory" alt="Logo Project">
 </p>
 
-## About Laravel
+<h1 align="center">NFC Inventory Management System</h1>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  Sistem Web Peminjaman dan Manajemen Inventaris Barang menggunakan teknologi <strong>NFC (Near Field Communication)</strong>. 
+  Memudahkan proses peminjaman, pelacakan, dan pengelolaan barang secara cepat, akurat, dan modern.
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚀 Fitur Utama
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Manajemen Barang (Admin):** Tambah, edit, hapus, dan kelola data inventaris barang lengkap dengan stok.
+- **Peminjaman via NFC:** Proses peminjaman barang semudah melakukan *tapping* (tap) kartu atau tag NFC ke perangkat.
+- **Riwayat & Pelacakan (History):** Melacak siapa yang meminjam barang, waktu peminjaman, dan status pengembalian.
+- **Laporan (Report):** Sistem rekapitulasi dan laporan peminjaman barang.
+- **Dashboard Interaktif:** Ringkasan statistik barang dan peminjaman secara *real-time*.
+- **Role Management:** Sistem autentikasi dengan pemisahan hak akses (Admin dan User).
 
-## Learning Laravel
+## 🛠️ Teknologi yang Digunakan
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Backend:** [Laravel](https://laravel.com/) (PHP)
+- **Frontend:** Laravel Blade, HTML, CSS, JavaScript (termasuk Web NFC API)
+- **Database:** MySQL
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 📸 Screenshots (Tangkapan Layar)
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+<!-- [FOTO DASHBOARD ADMIN: Ganti atribut 'src' pada tag img di bawah dengan path gambar screenshot Dashboard Admin Anda] -->
+### 1. Dashboard Admin
+![Dashboard Admin](https://via.placeholder.com/800x400?text=Screenshot+Dashboard+Admin)
 
-## Agentic Development
+<!-- [FOTO HALAMAN SCAN NFC: Ganti atribut 'src' di bawah dengan gambar saat proses scan/tapping NFC berlangsung] -->
+### 2. Halaman Tapping / Scan NFC
+![Scan NFC](https://via.placeholder.com/800x400?text=Screenshot+Tapping+NFC)
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+<!-- [FOTO HALAMAN DAFTAR BARANG: Ganti atribut 'src' di bawah dengan gambar tabel daftar barang] -->
+### 3. Daftar Inventaris Barang
+![Daftar Barang](https://via.placeholder.com/800x400?text=Screenshot+Daftar+Barang)
 
-```bash
-composer require laravel/boost --dev
+## ⚙️ Cara Instalasi (Instalasi Lokal)
 
-php artisan boost:install
-```
+Ikuti langkah-langkah berikut untuk menjalankan project ini di komputer lokal Anda:
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/BaridNst/NFC_Invetory.git
+   cd NFC_Invetory
+   ```
 
-## Contributing
+2. **Install Dependensi Composer & NPM**
+   ```bash
+   composer install
+   npm install
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. **Salin File Konfigurasi Environment**
+   ```bash
+   cp .env.example .env
+   ```
+   *Buka file `.env` dan atur koneksi database Anda (DB_DATABASE, DB_USERNAME, dll).*
 
-## Code of Conduct
+4. **Generate Application Key**
+   ```bash
+   php artisan key:generate
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. **Jalankan Migrasi Database dan Seeder**
+   ```bash
+   php artisan migrate --seed
+   ```
 
-## Security Vulnerabilities
+6. **Kompilasi Asset Frontend**
+   ```bash
+   npm run build
+   ```
+   *(Atau gunakan `npm run dev` jika sedang dalam tahap pengembangan)*
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. **Jalankan Server Lokal**
+   ```bash
+   php artisan serve
+   ```
+   *Buka `http://localhost:8000` di browser Anda.*
 
-## License
+## 📱 Catatan Penggunaan Fitur NFC
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Fitur *tapping* NFC membaca data menggunakan protokol **Web NFC API**. Agar fitur ini berjalan dengan baik:
+- Pastikan aplikasi diakses menggunakan koneksi **HTTPS** atau melalui **localhost** (syarat wajib dari Web NFC API).
+- Gunakan smartphone (misal: Android) yang dilengkapi sensor NFC yang aktif.
+- Gunakan browser modern yang mendukung Web NFC (direkomendasikan **Google Chrome** veri terbaru).
