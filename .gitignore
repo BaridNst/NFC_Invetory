@@ -25,3 +25,7 @@ _ide_helper.php
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Ngrok files
+/ngrok.exe
+/http.ngrok.bat

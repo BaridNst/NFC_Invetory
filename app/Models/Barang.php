@@ -19,4 +19,9 @@ class Barang extends Model
     {
         return $this->hasMany(Peminjaman::class, 'id_barang', 'id_barang');
     }
+
+    public function latestPeminjaman()
+    {
+        return $this->hasOne(Peminjaman::class, 'id_barang', 'id_barang')->orderBy('id_peminjaman', 'desc');
+    }
 }

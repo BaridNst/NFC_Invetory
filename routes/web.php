@@ -31,6 +31,7 @@ Route::middleware(['role:admin'])->prefix('admin')->group(function () {
     Route::get('/report', [AdminController::class, 'report'])->name('admin.report');
     
     // Approval
+    Route::get('/approvals', [AdminController::class, 'approvals'])->name('admin.approvals');
     Route::post('/peminjaman/{id}/approve', [AdminController::class, 'approve'])->name('admin.peminjaman.approve');
     Route::post('/peminjaman/{id}/reject', [AdminController::class, 'reject'])->name('admin.peminjaman.reject');
 });

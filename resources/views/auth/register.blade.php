@@ -8,8 +8,8 @@
         <div class="bg-white rounded-3xl shadow-xl shadow-orange-100/50 p-8 sm:p-10 border border-orange-50 relative overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-400 to-orange-500"></div>
             <div class="text-center mb-8 mt-2">
-                <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-500 text-3xl mx-auto mb-4 shadow-sm border border-orange-100">
-                    <i class="fas fa-user-plus"></i>
+                <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm border border-orange-100 p-2 overflow-hidden">
+                    <img src="{{ asset('assets/LOGO_UIN.png') }}" alt="LOGO UIN" class="w-full h-full object-contain">
                 </div>
                 <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">Create Account</h1>
                 <p class="text-gray-500 mt-2 font-medium">Daftar untuk mulai meminjam inventaris</p>
@@ -33,6 +33,16 @@
                         class="block w-full px-4 py-3.5 border-2 border-gray-100 bg-gray-50 rounded-2xl focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 focus:bg-white transition-all outline-none font-medium text-gray-800"
                         placeholder="Pilih username unik">
                     @error('username')
+                        <p class="text-red-500 text-sm font-medium mt-1 flex items-center gap-1"><i class="fas fa-exclamation-circle"></i> {{ $message }}</p>
+                    @enderror
+                </div>
+
+                <div class="space-y-1.5">
+                    <label class="block text-xs font-bold text-gray-800 uppercase tracking-widest">Nomor WhatsApp</label>
+                    <input type="text" name="no_wa" required
+                        class="block w-full px-4 py-3.5 border-2 border-gray-100 bg-gray-50 rounded-2xl focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 focus:bg-white transition-all outline-none font-medium text-gray-800"
+                        placeholder="Contoh: 08123456789">
+                    @error('no_wa')
                         <p class="text-red-500 text-sm font-medium mt-1 flex items-center gap-1"><i class="fas fa-exclamation-circle"></i> {{ $message }}</p>
                     @enderror
                 </div>

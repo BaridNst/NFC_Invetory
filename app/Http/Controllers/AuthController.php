@@ -21,12 +21,14 @@ class AuthController extends Controller
             'nama' => 'required|string|max:255',
             'username' => 'required|string|max:255|unique:user',
             'password' => 'required|string|min:8|confirmed',
+            'no_wa' => 'required|string|max:20',
         ]);
 
         User::create([
             'nama' => $request->nama,
             'username' => $request->username,
             'password' => Hash::make($request->password),
+            'no_wa' => $request->no_wa,
             'role' => 'user', // Default role is user
         ]);
 

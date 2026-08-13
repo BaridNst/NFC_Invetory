@@ -8,11 +8,12 @@
         <div class="bg-white rounded-3xl shadow-xl shadow-orange-100/50 p-8 sm:p-10 border border-orange-50 relative overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-400 to-orange-500"></div>
             <div class="text-center mb-8 mt-2">
-                <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-500 text-3xl mx-auto mb-4 shadow-sm border border-orange-100">
-                    <i class="fas fa-fingerprint"></i>
+                <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm border border-orange-100 p-2 overflow-hidden">
+                    <img src="{{ asset('assets/LOGO_UIN.png') }}" alt="LOGO UIN" class="w-full h-full object-contain">
                 </div>
-                <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">Welcome Back</h1>
-                <p class="text-gray-500 mt-2 font-medium">Sign in to manage your inventory</p>
+                <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">UIN Ar-Raniry Banda Aceh</h1>
+                <p class="text-gray-500 mt-2 font-medium">Sistem Peminjaman Berbasis NFC</p>
+                <p class="text-gray-500 mt-2 font-medium">Laboratorium Teknologi Informasi</p>
             </div>
 
             <form action="{{ url('/login') }}" method="POST" class="space-y-6">

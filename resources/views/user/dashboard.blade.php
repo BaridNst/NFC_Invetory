@@ -50,9 +50,17 @@
                             </div>
                             <div>
                                 <div class="font-bold text-gray-900 text-lg">{{ $log->barang->nama_barang }}</div>
-                                <div class="text-xs text-gray-500 font-medium mt-0.5">
-                                    <i class="far fa-calendar-alt mr-1 opacity-70"></i> {{ \Carbon\Carbon::parse($log->tgl_pinjam)->format('d M Y, H:i') }}
+                                <div class="text-xs text-gray-500 font-medium mt-0.5 flex flex-wrap gap-x-3 gap-y-1">
+                                    <span><i class="far fa-calendar-alt mr-1 opacity-70"></i> Pinjam: {{ \Carbon\Carbon::parse($log->tgl_pinjam)->format('d M Y, H:i') }}</span>
+                                    @if($log->tgl_harus_kembali)
+                                        <span class="font-semibold text-orange-600"><i class="far fa-clock mr-1 opacity-70"></i> Harus Kembali: {{ \Carbon\Carbon::parse($log->tgl_harus_kembali)->format('d M Y, H:i') }}</span>
+                                    @endif
                                 </div>
+                                @if($log->denda_terhitung > 0)
+                                    <div class="text-xs font-bold text-red-600 mt-1">
+                                        <i class="fas fa-exclamation-triangle animate-pulse"></i> Terlambat {{ $log->menit_terlambat }} Menit (Denda: Rp {{ number_format($log->denda_terhitung, 0, ',', '.') }})
+                                    </div>
+                                @endif
                             </div>
                         </div>
                         <div class="text-right">
